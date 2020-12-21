@@ -20,7 +20,7 @@ runtimeOptions: {
   }
 }));
 app.set("view engine", "hbs");
-app.use("/", orderController);
+
 
 
 
@@ -32,3 +32,4 @@ if (port == null || port == "") {
 app.listen(port, function(){
     console.log("Server has started successfully");
 });
+app.use("/", orderController);
