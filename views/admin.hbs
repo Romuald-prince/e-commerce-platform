@@ -1,0 +1,159 @@
+<nav class="navbar fixed-top navbar-dark navbar-expand-md bg-success text-white">
+    <a class="text-white navbar-brand" href="/">
+        <i class="fab fa-pagelines"></i>FruitVeg Lovers
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto menu">
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container mt-4">
+    <main role="main">
+        <div class="row">
+            <div class="col">
+                <h1>Orders</h1>
+                <div class="table-responsive-sm">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Order</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each order}}
+                            <tr>
+                                <td>{{this._id}}</td>
+                                <td>{{this.order}}</td>
+                                <td>{{this.total}}</td>
+                                <td>
+                                    <a class="btn btn-primary" href="/order/{{this._id}}">Update</a>
+                                    <a class="btn btn-danger" href="/order/delete/{{this._id}}">Delete</a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+        <form class="card p-2">
+
+            <div class="container">
+                <div class="col-md-8 order-md-1">
+                    <h4 class="mb-3"><strong>Contact Details</strong></h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="md-form md-outline my-2">
+                                    <input type="text" id="firstName" class="form-control" required>
+                                    <label for="firstName">Name</label>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="md-form md-outline my-2">
+                                    <input type="text" id="firstName" class="form-control" required>
+                                    <label for="firstName">Contact</label>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Valid contact is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        {{!-- PAYMENT --}}
+
+
+                        <hr class="mb-4">
+
+                        <h4 class="mb-3"><strong>Payment</strong></h4>
+
+                        <div class="d-block my-3">
+                            <div class="form-check pl-0">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
+                                    required>
+                                <label class="form-check-label" for="credit">Credit card</label>
+                            </div>
+                            <div class="form-check pl-0">
+                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="debit">Debit card</label>
+                            </div>
+                            <div class="form-check pl-0">
+                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <div class="md-form md-outline my-2">
+                                    <input type="text" id="cc-name" class="form-control" required>
+                                    <label for="cc-name">Name on card</label>
+                                    <small class="text-muted">Full name as displayed on card</small>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Name on card is required
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="md-form md-outline my-2">
+                                    <input type="text" id="cc-number" class="form-control" required>
+                                    <label for="cc-number">Credit card number</label>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Credit card number is required
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 mb-2">
+                                <div class="md-form md-outline my-2">
+                                    <input type="text" id="cc-expiration" class="form-control" required>
+                                    <label for="cc-expiration">Expiration</label>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Expiration date required
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <div class="md-form md-outline my-2">
+                                    <input type="text" id="cc-cvv" class="form-control" required>
+                                    <label for="cc-cvv">CVV</label>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Security code required
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mb-4">
+                        <button class="btn btn-success btn-lg btn-block" type="submit"
+                            href="https://www.paypal.com/en/signin">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+</div>
+
+
+</form>
+
+
+
+
+</main>
+
+</div>

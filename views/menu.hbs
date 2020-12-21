@@ -1,0 +1,101 @@
+<header>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-md bg-success text-white">
+        <a class="text-white navbar-brand" href="/">
+            <i class="fab fa-pagelines"></i>FruitVeg Lovers
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto menu">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#fruit" class="nav-link">Fruits</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#juice" class="nav-link">Juices</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#salad" class="nav-link">Salads</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <a href="/cart" class="text-white nav-link">
+                    <i class="text-warning fas fa-shopping-cart">
+                    </i>Shopping Cart <i style="color:yellow" id="cart_n"></i>
+                </a>
+                <a href="/admin" class="nav-link  text white">
+                    <i class="far fa-user"></i>Administrator
+                </a>
+            </form>
+        </div>
+
+    </nav>
+</header>
+
+<main role="main">
+    <div class="carousel slide" data-ride="carousel" id="myCarousel">
+        <ol class="carousel-indicators">
+            <li style="z-index:102;" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li style="z-index:102;" data-target="#myCarousel" data-slide-to="1"></li>
+            <li style="z-index:102;" data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="imgFilter first-slide" src="img/carousel/ima1.jpeg" alt="First-Slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>FruitVeg Lovers </h1>
+                        <p>Welcome to the world of fresh fruits, vegetables and juices quench your hunger here.</p>
+                        <p><a href="#fruit" role="butoon" class="btn btn-primary btn-lg">Products</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img class="imgFilter second-slide" src="img/carousel/ima2.jpeg" alt="Second-Slide">
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>FruitVeg Lovers </h1>
+                        <p>Discover all our Juices diversity and feel the taste of zero chemical drinks</p>
+                        <p><a href="#juice" role="butoon" class="btn btn-primary btn-lg">Products</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img class="imgFilter third-slide" src="img/carousel/ima3.jpeg" alt="Third-Slide">
+                <div class="container">
+                    <div class="carousel-caption text-right">
+                        <h1>FruitVeg Lovers </h1>
+                        <p>Keep yourself in good shape by eating our fresh vegetables salad, just make your choice</p>
+                        <p><a href="#salad" role="button" class="btn btn-primary btn-lg">Products</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a style="z-index:101;" class="carousel-control-prev" role="button" data-slide="prev" href="#myCarousel">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previus</span>
+        </a>
+        <a style="z-index:101;" class="carousel-control-next" role="button" data-slide="next" href="#myCarousel">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="container marketing">
+        <br>
+        <h2 id="fruit">Fruits</h2>
+        <hr>
+        <div class="row" id="fruitDIV"></div>
+        <h2 id="juice">Juices</h2>
+        <hr>
+        <div class="row" id="juiceDIV"></div>
+        <h2 id="salad">Salads</h2>
+        <hr>
+        <div class="row" id="saladDIV"></div>
+        <hr class="featurette-divider">
+    </div>
+</main>
+<script src="/js/main.js"></script>
